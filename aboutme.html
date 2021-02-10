@@ -36,5 +36,22 @@
         <td>$500</td>
       </tr>
       </table>
+      <hr>Here is an example for Google Apps Script program</hr>
+  
+      
+      <blockquote cite=“https://en.wikipedia.org/wiki/Google_Apps_Script”> Apps Script is a scripting platform developed by Google for light-weight application development in the Google Workspace platform </blockquote>
+        <pre>
+            function doGet(e) {  
+                var searchTerm = 'Script Tools'
+                var ui = XmlService.createDocument(XmlService.createElement('html')).setDocType(XmlService.createDocType('html'))
+                var body = XmlService.createElement('body')  
+                body = buildTree(body, searchTerm);
+                ui.getRootElement().addContent(body)
+                return HtmlService.createHtmlOutput(XmlService.getRawFormat().format(ui))
+              }
+
+            </pre>
+            <a href="https://en.wikipedia.org/wiki/Google_Apps_Script">Source link to Code</a>
+           
 </body>
 </html>
